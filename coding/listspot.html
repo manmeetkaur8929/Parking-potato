@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list your spot</title>
+    <link rel="stylesheet" href="listspot.css">
+    <script src="login.js"></script>
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 80%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="page1.html">
+        <div class="logo">
+          <img src="images/logo.png">
+        </div>
+         </a>
+        <div class="menu-icons">
+            <a href="#">About us</a>
+            <a href="login.html">Login</a>
+        </div>
+      </div>
+    <h1><br><pre>  Form:</pre><br></h1>
+    <div class="container">
+        <div class="address" id="address_id">
+          <label> Please enter your address:<br /></label>
+          <input type="text">
+          <button onclick="getLocation()" id="lat_id" class="coord_btn">Get Coords</button>
+          <p id="demo"></p>
+          <script>
+            var x = document.getElementById("demo");
+            
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+            
+            function showPosition(position) {
+              x.innerHTML = "Latitude: " + position.coords.latitude + 
+              "<br>Longitude: " + position.coords.longitude;
+            }
+
+            
+            </script>
+            
+        </div>
+        <div class="spots" id="spots_id">
+            <label><br> Total number of parking spots<br /></label>
+            <input type="number">
+        </div>
+        <div class="area" id="area_id">
+            <label><br> Area<br /></label>
+            <select class="ui search dropdown">
+
+                <option value="RE">Residential</option>
+                <option value="CO">commercial</option>
+                </select>
+        </div>
+        <div class="spot_type" id="vehicle_id">
+            <label><br> vehicle type<br /></label>
+            <select class="ui search dropdown">
+
+                <option value="">car</option>
+                <option value="">scooter</option>
+
+                </select>
+        </div>
+        </textarea>
+
+
+    <input type="submit" onclick="alert('submitted successfully!')" value="Submit">
+      </div>
+      
+</body>
+
+
+</html>

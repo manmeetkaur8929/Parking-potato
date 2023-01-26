@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index page</title>
+
+  <link rel="stylesheet" href="page1.css">
+  <script src="login.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+</head>
+
+<body onload="slider()">
+
+
+  <div class="banner">
+    <div class="slider">
+      <img src="images/img1.jpg" id="slideImg">
+    </div>
+    <div class="overlay">
+      <div class="navbar">
+        <a href="page1.html">
+        <div class="logo">
+          <img src="images/logo.png">
+        </div>
+      </a>
+        <div class="menu-icons">
+          <a href="about.html">About us</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+      <div class="content">
+        <h1>PARKING ON DEMAND</h1>
+        <h3>parking made easy</h3>
+
+      <div>
+        <a href="findspot.html">
+        <button type="button">FIND PARKING SPOT</button>
+      </a>
+      <a href="listspot.html">
+        <button type="button" class="btn-2">LIST YOUR SPOT</button>
+      </a>
+      </div>
+      </div>
+    </div>
+  </div>
+ 
+<script>
+  var slideImg = document.getElementById("slideImg");
+
+  var images = new Array(
+    "images/img1.jpg",
+    "images/img2.jpg",
+    "images/img3.jpg",
+    "images/img4.jpg"
+  )
+  var len = images.length;
+  var i=0;
+
+  function slider(){
+    if(i > len-1){
+      i=0;
+    }
+    slideImg.src = images[i];
+    i++;
+    setTimeout('slider()',3000);
+  }
+</script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCqEHCURjJNlcKNgNms_mVrTp6uNcDO41E",
+    authDomain: "parking-shybois.firebaseapp.com",
+    projectId: "parking-shybois",
+    storageBucket: "parking-shybois.appspot.com",
+    messagingSenderId: "306274038981",
+    appId: "1:306274038981:web:dc8e683fcdaba351b3acac",
+    measurementId: "G-7MLR29NEE1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
