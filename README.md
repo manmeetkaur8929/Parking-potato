@@ -2,7 +2,7 @@
 We face parking problems in our daily lives and it only gets worse with the growing population. Working people go out to their daily jobs every day leaving their parking spaces idle for a long time this empty parking space can be used wisely by renting it out temporarily to needy users and it can also help them earn incentives and help the community.
 
 ## What it does
-Find parking spots in your community that are available near you. Our parking app will keep you up-to-date with areas and will save you time by booking a parking spot in advance. Also, rent your parking place when you are not there and earn some incentives.
+Find parking spots in your community that are available near you. Our parking website will keep you up-to-date with areas and will save you time by booking a parking spot in advance. Also, rent your parking place when you are not there and earn some incentives.
 
 ## How we built it
 1. We made a Flexible Website with minimal UI/UX
