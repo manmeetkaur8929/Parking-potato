@@ -5,7 +5,7 @@ We face parking problems in our daily lives and it only gets worse with the grow
 Find parking spots in your community that are available near you. Our parking app will keep you up-to-date with areas and will save you time by booking a parking spot in advance. Also, rent your parking place when you are not there and earn some incentives.
 
 ## How we built it
-1. We used Flutter to create a cross-platform handy app with minimal UI/UX
+1. We made a Flexible Website with minimal UI/UX
 2. Used HTML5, JavaScript, Css3 used to create a fully responsive and user-friendly website where users can list and find parking spots
 3. Also used Used NoSql database to store parking spaces and added open-source local data-set provided by mentors
 5. We are using IR and Ultrasonic sensors to check if the parked car is safe or not any disparity will trigger alarms both on the landlord's as well as car owner's device
